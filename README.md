@@ -1,4 +1,6 @@
-# Compression and Decompression for Arduino
+# Compression and Decompression for Particle
+
+This library has been ported from Arundale Ramanathan's [Arduino library for Unishox 2 compression method](https://github.com/siara-cc/Unishox_Arduino_lib) for use on the Particle platforms.
 
 Unishox is a technique for compressing short strings.  This library provides for Arduino the same API as the desktop version at [Unishox - Guaranteed compression for Short Strings](https://github.com/siara-cc/Unishox).
 
@@ -9,17 +11,19 @@ To find out how Unishox works, read [this article](https://github.com/siara-cc/U
 The following API can be used for compressing and decompressing strings or files:
 
 ```
+#include "unishox2.h"
+
 int unishox_compress_simple(const char *in, long len, char *out);
 int unishox_decompress_simple(const char *in, long len, char *out);
 ```
 
 See example provided for demonstration of usage or see the documentation at https://github.com/siara-cc/Unishox for further details.
 
-For using Unishox to store compressed data in Progmem of Arduino Uno and up, see the library at https://github.com/siara-cc/Unishox_Arduino_Progmem_lib.
+For using Unishox to store compressed data on Particle, see the example(s) in [examples](examples/).
 
 ## Example
 
-The example provided with this library allows you to enter a string and see how much compression can be achieved.  In general, compression utilities such as `zip`, `gzip` do not compress short strings well and often expand them.  They also use lots of memory which makes them unusable in constrained environments like Arduino.
+The example provided with this library allows you to enter a string and see how much compression can be achieved.  In general, compression utilities such as `zip`, `gzip` do not compress short strings well and often expand them.  They also use lots of memory which makes them unusable in constrained environments like Particle devices.
 
 ## Related projects
 

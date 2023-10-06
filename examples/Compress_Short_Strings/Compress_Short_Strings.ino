@@ -4,10 +4,6 @@
 
   How Unishox works:
   https://github.com/siara-cc/Unishox/blob/master/Unishox_Article_2.pdf?raw=true
-
-  To store and retrieve compressed data in progmem, use the other library:
-  https://github.com/siara-cc/Unishox_Arduino_Progmem_lib
-
 */
 #include "unishox2.h"
 
